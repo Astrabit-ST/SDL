@@ -254,7 +254,7 @@ static int Emscripten_CreateWindow(_THIS, SDL_Window *window)
                 return -1;
             }
         }
-        wdata->egl_surface = SDL_EGL_CreateSurface(_this, 0);
+        wdata->egl_surface = SDL_EGL_CreateSurface(_this, window, 0);
 
         if (wdata->egl_surface == EGL_NO_SURFACE) {
             return SDL_SetError("Could not create GLES window surface");
